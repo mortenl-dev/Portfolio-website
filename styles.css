@@ -1,0 +1,111 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Apply a background color and font styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    animation: fade-in 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #312f38;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    height: 300%;
+}
+/* Style the header with a background color and text color */
+header {
+    background-color: #312f38; /* Gray gradient for the header */
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/* Style the navigation menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #a8ffcc; /* Change this to your desired color (e.g., blue) */
+    text-decoration: none;
+    
+}
+
+/* Add an underline on hover */
+a:hover {
+    text-decoration: underline;
+}
+.logo {
+    font-size: 24px;
+    color: #9cffbd;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style sections and containers */
+/* Update the section background to a slightly lighter tone */
+.section {
+     /* Modern gray color for sections */
+    padding: 0px 0;
+    
+}
+
+#portfolio {
+    background-color: #211f2b;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Style portfolio items */
+.portfolio-item {
+    
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+/* Style the footer */
+footer {
+    background: linear-gradient(to bottom, #111111, #222222); /* Gray gradient for the header */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
