@@ -20,83 +20,112 @@
                 <h1>Morten Lins</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li>
+                    <button id="english-btn" class="language-btn" width="32px" height="32px">
+                        
+                        <img src="usuk.svg" alt="English" class="flag-icon" width="32px" height="32px">
+                    </button>
+                    <div class="btn-border"></div>
+                </li>
+                <li>
+                    <button id="german-btn" class="language-btn">
+                        
+                        <img src="ger.svg" alt="German" class="flag-icon">
+                    </button>
+                    <div class="btn-border"></div>
+                </li>
+                <li><a href="#about" class="fade-underline">About Me</a></li>
+                <li><a href="#portfolio" class="fade-underline">Education</a></li>
+                <li><a href="#contact" class="fade-underline">Contact Me</a></li>
+                
             </ul>
+
         </nav>
     </header>
-
+    
     <section id="github" class="section">
         <div class="container">
-            <h2>My Github profile</h2>
+            <h2 data-lang data-lang-english = "My Github profile" data-lang-german="Mein Github Profil"></h2>
             
             <a href="https://github.com/mortenl-dev" target="_blank">github.com/mortenl-dev</a>
         </div>
     </section>
-
+    
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 data-lang data-lang-english="About Me" data-lang-german="Über mich"></h2>
             
-            <p>Your introduction and description go here.</p>
+            
+            <p data-lang data-lang-english="I am an 18-year old German-Danish high-school graduate with a burning passion for software development. By clicking on the link to my Github profile above, you can view all the projects I have published until now, with various complex or simple functionalities. As of now, I am on the look-out for learning opportunities in the tech industry, such as an internship or job. If you are interested in working with me, feel free to contact me at my email below. I'd gladly demonstrate my abilities in an interview with you!" data-lang-german="Ich bin ein 18-jähriger deutsch-dänischer Abiturient mit einer Leidenschaft für die Softwareentwicklung. Durch Klicken auf den Link zu meinem Github-Profil oben können Sie alle Projekte einsehen, die ich bisher veröffentlicht habe, mit verschiedenen komplexen oder einfachen Funktionalitäten. Aktuell suche ich nach Lernmöglichkeiten in der Tech-Branche, wie zum Beispiel ein Praktikum oder einen Job. Wenn Sie Interesse an einer Zusammenarbeit haben, können Sie mich gerne über meine E-Mail unten kontaktieren. Ich würde meine Fähigkeiten gerne in einem Gespräch mit Ihnen vorstellen!"></p>
+
+            <div class="about-image">
+                <img src="project1.png" alt="Project 1" >
+            </div>
+            <h2 data-lang data-lang-english="I am especially proficient with" data-lang-german="Ich beherrsche besonders"></h2>
+            <ul class ="skill-list">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40"/>  
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> 
+                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> 
+                    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>  
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> 
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
+
+            </ul>
         </div>
     </section>
 
     <section id="portfolio" class="section">
         <div class="container">
-            <h2>Portfolio</h2>
+            <h2 data-lang data-lang-english="Education" data-lang-german="Bildung"></h2>
             <div class="portfolio-item">
-                <img src="project1.png" alt="Project 1"  width="25%" height="25%">
-                <h3>Project 1</h3>
-                <p>Description of your project.</p>
+                <h3 data-lang data-lang-english="Highschool" data-lang-german="Gymnasium"></h3>
+                
+                <p data-lang data-lang-english="I went to the Felix-Mendelssohn-Bartholdy-Gymnasium in Berlin, where I earned my German Abitur with an average grade of 2.2. My main courses were chemistry and English." data-lang-german="Ich besuchte das Felix-Mendelssohn-Bartholdy-Gymnasium in Berlin, wo ich mein deutsches Abitur mit einem Durchschnitt von 2.2 erworben habe. Meine Hauptfächer waren Chemie und Englisch."></p>
+                
+                <a href="Abiturzeugnis.pdf" target="_blank" data-lang data-lang-english="Click to view degree documents" data-lang-german="Klicken Sie, um die Abschlussdokumente anzuzeigen"></a>
             </div>
             <div class="portfolio-item">
-                <img src="project2.jpg" alt="Project 2" >
-                <h3>Project 2</h3>
-                <p>Description of your project.</p>
+                <h3 data-lang data-lang-english="Programming experience" data-lang-german="Programmiererfahrung"></h3>
+                
+                <p data-lang data-lang-english="I am a self-taught programmer, and eager to gain experience in the tech industry! I have not yet attained a University degree, but I am confident in my skills and will gladly demonstrate them in an Interview." data-lang-german="Ich bin ein autodidaktischer Programmierer und möchte gerne Erfahrungen in der Tech-Branche sammeln! Ich habe noch keinen Universitätsabschluss, aber ich bin zuversichtlich in meine Fähigkeiten und werde sie gerne in einem Interview demonstrieren."></p>
             </div>
             <!-- Add more portfolio items here -->
         </div>
     </section>
 
     <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>You can reach me at your@email.com</p>
-        </div>
-    </section>
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel nisi ac risus condimentum scelerisque. Proin euismod interdum lectus, in convallis lectus tincidunt ac.</p>
-            <!-- Add more content here -->
+        <div class= "container">
+            <h2 data-lang data-lang-english="Contact Me" data-lang-german="Kontaktiere mich"></h2>
+            <p data-lang data-lang-english="You can reach me at mortenlins@gmail.com" data-lang-german="Sie können mich unter mortenlins@gmail.com erreichen"></p>
         </div>
     </section>
 
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-item">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of your project.</p>
-            </div>
-            <!-- Add more portfolio items here -->
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>You can reach me at your@email.com</p>
-            <!-- Add more content here -->
-        </div>
-    </section>
     <footer>
         <div class="container">
             <p>&copy; 2023 Morten Ren Lins</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript function to handle language switch
+        function switchLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang-english], [data-lang-german]');
+            elements.forEach(element => {
+                element.innerText = language === 'german' ? element.getAttribute('data-lang-german') : element.getAttribute('data-lang-english');
+            });
+        }
+
+        // Automatically load English content when the page loads
+        window.addEventListener('load', function() {
+            switchLanguage('english');
+        });
+
+        // Add event listeners to the language buttons
+        const englishBtn = document.getElementById('english-btn');
+        englishBtn.addEventListener('click', () => switchLanguage('english'));
+
+        const germanBtn = document.getElementById('german-btn');
+        germanBtn.addEventListener('click', () => switchLanguage('german'));
+    </script>
 </body>
 </html>

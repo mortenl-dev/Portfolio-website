@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'League Spartan', sans-serif;
-    animation: fade-in 0.5s ease-in-out;
+    
     display: flex;
     flex-direction: column;
     background-color: #312f38;
@@ -57,14 +57,16 @@ a:hover {
 }
 .logo {
     font-size: 24px;
-    color: #9cffbd;
+    color: #32ffdd;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
 }
-
+.nav-links li :hover {
+    text-decoration: underline;
+}
 .nav-links li {
     margin-right: 20px;
 }
@@ -73,7 +75,38 @@ a:hover {
     text-decoration: none;
     color: #fff;
 }
+.language-btn  {
+    background-color: #312f38;
+            border: none;
+            padding: 0;
+            width: 32px; /* Set the button size as needed */
+            height: 32px; /* Set the button size as needed */
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+}
+.btn-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
 
+.language-btn:hover {
+    filter: grayscale(0%); /* Change hue when hovering */
+}
+.language-btn img {
+
+            width: 200%;
+            height: 200%;
+            
+}
 /* Style sections and containers */
 /* Update the section background to a slightly lighter tone */
 .section {
@@ -82,8 +115,36 @@ a:hover {
     
 }
 
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-direction: row;
+    list-style: none;
+}
+
+.skill-list img {
+    margin: 20px 0;
+    width: 64px;
+    height:64px;
+}
 #portfolio {
     background-color: #211f2b;
+}
+
+.about-image {
+    flex: 1;
+    float: right; /* Adjust text alignment for the image */
+    width:25%;
+    height:25%;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.about-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
 }
 .container {
     max-width: 1200px;
@@ -92,7 +153,33 @@ a:hover {
     line-height: 1.5;
     color: #fff;
 }
+.fade-underline {
+    text-decoration: none;
+    position: relative;
+    color: #a8ffcc; /* Text color */
+    transition: color 0.3s, border-bottom 0.3s; /* Transition for color and border-bottom */
+}
 
+.fade-underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a8ffcc; /* Underline color */
+    transform: scaleX(0); /* Initially set to zero width */
+    transform-origin: left;
+    transition: transform 0.3s; /* Transition for the underline */
+}
+
+.fade-underline:hover {
+    color: #a8ffcc; /* Text color on hover */
+}
+
+.fade-underline:hover::before {
+    transform: scaleX(1); /* Expand to full width on hover */
+}
 /* Style portfolio items */
 .portfolio-item {
     
@@ -103,7 +190,6 @@ a:hover {
 
 /* Style the footer */
 footer {
-    background: linear-gradient(to bottom, #111111, #222222); /* Gray gradient for the header */
     color: #fff;
     text-align: center;
     padding: 20px 0;
