@@ -41,7 +41,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0 20px;
 }
 
@@ -76,37 +76,52 @@ a:hover {
     color: #fff;
 }
 .language-btn  {
+    margin: -24px auto;
     background-color: #312f38;
             border: none;
             padding: 0;
             width: 32px; /* Set the button size as needed */
             height: 32px; /* Set the button size as needed */
             position: relative;
-            overflow: hidden;
-            border-radius: 50%;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            filter: grayscale(100%);
+    border-radius: 50%;
             transition: filter 0.3s;
+            overflow: hidden;
 }
-.btn-border {
+.language-div {
+    padding: 15px 0;
+    position:relative;
+}
+.language-div::before {
+    content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
-    border: 2px solid transparent;
-    border-radius: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a8ffcc;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
 }
 
-.language-btn:hover {
-    filter: grayscale(0%); /* Change hue when hovering */
+
+.language-div:hover::before {
+    transform: scaleX(1);
 }
+.language-btn:hover {
+cursor:pointer;}
 .language-btn img {
+    
 
             width: 200%;
             height: 200%;
             
 }
+
 /* Style sections and containers */
 /* Update the section background to a slightly lighter tone */
 .section {
@@ -116,35 +131,38 @@ a:hover {
 }
 
 .skill-list {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
-    padding: 0 20px;
-    flex-direction: row;
     list-style: none;
 }
 
 .skill-list img {
-    margin: 20px 0;
+    margin-top: 10px;
+    margin-right: 40px;
     width: 64px;
     height:64px;
 }
 #portfolio {
     background-color: #211f2b;
+    margin: 40px 0;
+    padding: 40px 0;
 }
 
 .about-image {
     flex: 1;
-    float: right; /* Adjust text alignment for the image */
-    width:25%;
-    height:25%;
+ /* Adjust text alignment for the image */
+    width:14%;
+    height:14%;
     animation: fade-in 0.5s ease-in-out;
+    position:absolute;
+    right:520px;
+    top: 290px;
 }
 
 .about-image img {
     max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
+    /* Maintain aspect ratio */
 }
 .container {
     max-width: 1200px;
