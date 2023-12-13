@@ -4,20 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <!-- Add the Google Fonts link here -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
             <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="styles.css">
+        
+        <link rel="icon" href="logo.png">
     </head>
     
 <body>
+    
     <header>
         
         <nav>
             
             <div class="logo">
                 <h1>Morten Lins</h1>
+                
+            </div>
+            <div class="custom-shape-divider-top-1702079871">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
             </div>
             <ul class="nav-links">
                 <li>    
@@ -36,9 +46,9 @@
                     </button>
                 </div>
                 </li>
-                <li><a id="aboutID" href="#about" class="fade-underline"data-lang data-lang-english="About Me" data-lang-german="Über mich"></a></li>
-                <li><a id="portfolioID" href="#portfolio" class="fade-underline"data-lang data-lang-english="Education" data-lang-german="Bildung"></a></li>
-                <li><a id="contactID"href="#contact" class="fade-underline" data-lang data-lang-english="Contact Me" data-lang-german="Kontakt"></a></li>
+                <li><a id="aboutID" href="#about"data-lang data-lang-english="About Me" data-lang-german="Über mich"></a></li>
+                <li><a id="portfolioID" href="#portfolio" data-lang data-lang-english="Education" data-lang-german="Bildung"></a></li>
+                <li><a id="contactID"href="#contact"  data-lang data-lang-english="Contact Me" data-lang-german="Kontakt"></a></li>
                 
             </ul>
 
@@ -47,18 +57,18 @@
     
     <section id="github" class="section">
         <div class="container">
-            <h2 data-lang data-lang-english = "My Github profile" data-lang-german="Mein Github Profil"></h2>
+            <a style="font-size:30px ;font-weight:bold"href="https://github.com/mortenl-dev" target="_blank" data-lang data-lang-english = "My Github profile" data-lang-german="Mein Github Profil"></a>
             
-            <a href="https://github.com/mortenl-dev" target="_blank">github.com/mortenl-dev</a>
         </div>
     </section>
+    
     
     <section id="about" class="section">
         <div class="container">
             <h2 data-lang data-lang-english="About Me" data-lang-german="Über mich"></h2>
             
             
-            <p data-lang data-lang-english="I am an 18-year old German-Danish high-school graduate with a burning passion for software development. By clicking on the link to my Github profile above, you can view all the projects I have published until now, with various complex or simple functionalities. As of now, I am on the look-out for learning opportunities in the tech industry, such as an internship or job. If you are interested in working with me, feel free to contact me at my email below. I'd gladly demonstrate my abilities in an interview with you!" 
+            <p class="item" data-lang data-lang-english="I am an 18-year old German-Danish high-school graduate with a burning passion for software development. By clicking on the link to my Github profile above, you can view all the projects I have published until now, with various complex or simple functions. As of now, I am on the look-out for learning opportunities in the tech industry, such as an internship or job. If you are interested in working with me, feel free to contact me at my email below. I'd gladly demonstrate my abilities in an interview with you!" 
             data-lang-german="Ich bin ein 18-jähriger deutsch-dänischer Abiturient mit einer Leidenschaft für die Softwareentwicklung. Sie können sich oben alle meine Github Projekte anschauen die ich bisher veröffentlicht habe, mit verschiedenen komplexen oder simplen Funktionalitäten. Aktuell suche ich nach Lernmöglichkeiten in der Tech-Branche, Beispielsweise ein Praktikum oder einen Job. Falls mein Portfolio Sie interessiert, können Sie mich unter per email kontaktieren. Ich würde meine Fähigkeiten gerne in einem Gespräch mit Ihnen demonstrieren!"></p>
 
             
@@ -78,25 +88,62 @@
         </div>
     </section>
 
+
+
+
+
     <section id="portfolio" class="section" >
+
         <div class="container">
+            <div class = "counterContainer">
+                <div class="counter" id="GithubCounter">0</div>
+                <h3 class = "counterDesc">Github repositories</h3>
+                <div class="counter" id="CommitCounter">0</div>
+                <h3 class = "counterDesc">Commits in the past month</h3>
+
+            </div>
+            
             <h2 data-lang data-lang-english="Education" data-lang-german="Bildung"></h2>
-            <div class="portfolio-item">
+            <div class="item">
                 <h3 data-lang data-lang-english="Highschool" data-lang-german="Gymnasium"></h3>
                 
-                <p data-lang data-lang-english="I went to the Felix-Mendelssohn-Bartholdy-Gymnasium in Berlin, where I earned my German Abitur with an average grade of 2.2. My main courses were chemistry and English." data-lang-german="Ich besuchte das Felix-Mendelssohn-Bartholdy-Gymnasium in Berlin, wo ich mein deutsches Abitur mit einem Durchschnitt von 2.2 erworben habe. Meine Hauptfächer waren Chemie und Englisch."></p>
+                <p data-lang data-lang-english="I went to the Felix-Mendelssohn-Bartholdy-Gymnasium in Berlin, where I earned my German Abitur with chemistry and English as my main subjects." data-lang-german="Ich besuchte das Felix-Mendelssohn-Bartholdy-Gymnasium in Berlin, wo ich mein deutsches Abitur mit den Leistungskursen Chemie und Englisch erworben habe."></p>
                 
                 <a href="Abiturzeugnis.pdf" target="_blank" data-lang data-lang-english="Click to view degree documents" data-lang-german="Klicken Sie, um mein Zeugnis anzuzeigen"></a>
             </div>
-            <div class="portfolio-item">
+
+            <div class="item">
+                <h3 data-lang data-lang-english="Certificate in Advanced English" data-lang-german="Zertifikat in fortgeschrittenem Englisch"></h3>
+                
+                <p data-lang data-lang-english="I have earned a grading of C2 in the official Cambridge Assessment Test." data-lang-german="Ich habe eine Wertung von C2 in dem offiziellen Cambridge Assessment Test erhalten."></p>
+            
+                <a href="Cambridge.pdf" target="_blank" data-lang data-lang-english="Click to view certificate" data-lang-german="Klicken Sie, um mein Zertifikat anzuzeigen"></a>
+                
+            </div>
+
+            <div class="item">
                 <h3 data-lang data-lang-english="Programming experience" data-lang-german="Programmiererfahrung"></h3>
                 
                 <p data-lang data-lang-english="I am a self-taught programmer, and eager to gain experience in the tech industry! I have not yet attained a University degree, but I am confident in my skills and will gladly demonstrate them in an Interview." data-lang-german="Ich bin ein autodidaktischer Programmierer und möchte gerne Erfahrungen in der Tech-Branche sammeln! Ich habe noch keinen Universitätsabschluss, aber ich bin zuversichtlich in meine Fähigkeiten und werde sie gerne in einem Interview demonstrieren."></p>
             </div>
-            <!-- Add more portfolio items here -->
         </div>
     </section>
-
+    
+    <section>
+        <div id="buttons">
+            <button style="left:2.5%"onclick="switchElement(-1)"><--</button>
+            <button style="right:2.5%"onclick="switchElement(1)">--></button>
+        </div>
+        <div id="projects" class="section">
+        
+        
+        
+    
+        
+    
+        </div>
+    </section>
+    
     <section id="contact" class="section">
         <div class= "container">
             <h2 data-lang data-lang-english="Contact Me" data-lang-german="Kontaktiere mich"></h2>
@@ -106,12 +153,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Morten Ren Lins</p>
+            <p>&copy; 2023 developed by Morten Ren Lins</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript function to handle language switch
+    
+        
+        // language switch btn
         function switchLanguage(language) {
             const elements = document.querySelectorAll('[data-lang-english], [data-lang-german]');
             elements.forEach(element => {
@@ -119,12 +168,11 @@
             });
         }
 
-        // Automatically load English content when the page loads
+        // set to english
         window.addEventListener('load', function() {
             switchLanguage('english');
         });
 
-        // Add event listeners to the language buttons
         const englishBtn = document.getElementById('english-btn');
         englishBtn.addEventListener('click', () => switchLanguage('english'));
 
@@ -140,16 +188,76 @@
         const AboutVar = 'about';
         const PortfolioVar = 'portfolio';
         const ContactVar = 'contact'
-        // Add a click event listener to your link
         document.getElementById('aboutID').addEventListener('click', function () {
-            scrollToElement(AboutVar); // Replace 'scrollTarget' with the ID of your target element
+            scrollToElement(AboutVar); 
         });
         document.getElementById('portfolioID').addEventListener('click', function () {
-            scrollToElement(PortfolioVar); // Replace 'scrollTarget' with the ID of your target element
+            scrollToElement(PortfolioVar); 
         });
         document.getElementById('contactID').addEventListener('click', function () {
-            scrollToElement(ContactVar); // Replace 'scrollTarget' with the ID of your target element
+            scrollToElement(ContactVar); 
         });
+
+        
+
+        //window.onload = fetchData;
+
+        //VARIABLES IN GITHUBAPI.JS
+        async function fetchData() {
+            try {
+                // Display the commit count
+                const commits = await fetch(apiUrlCommit);
+                const commitdata = await commits.json();
+                const commitCount = commitdata.total_count;
+                
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                
+                // Display the repository count
+                const repoFunc = document.getElementById("GithubCounter");
+                countAnimation(data.length, repoFunc, "#ff6347");
+                const commitFunc = document.getElementById("CommitCounter");
+                countAnimation(commitCount, commitFunc, "#32ffdd");
+  function countAnimation (len, counterElement, color) {
+    const targetCount = len;
+    const animationDuration = 2500; 
+    const frameDuration = 1000 / 60; 
+
+    const totalFrames = Math.round(animationDuration / frameDuration);
+    const countIncrement = targetCount / totalFrames;
+
+    let currentCount = 0;
+    let frame = 0;
+
+    const updateCount = () => {
+        currentCount += countIncrement;
+        counterElement.textContent = Math.round(currentCount);
+
+       
+        if (frame === totalFrames / 2) {
+        counterElement.style.color = color; 
+        }
+
+        frame++;
+
+        if (frame <= totalFrames) {
+        requestAnimationFrame(updateCount);
+        }
+    };
+
+    updateCount();
+  }             
+  
+            } catch (error) {
+                console.error("Error fetching data from GitHub API:", error);
+                document.getElementById("repoCount").textContent = "Error fetching data.";
+            }
+        }
+
+        window.onload = fetchData;
+        
     </script>
 </body>
+<script rel="text/javascript" src="githubapi.js"></script>
+<script rel="text/javascript" src="moveProj.js"></script>
 </html>

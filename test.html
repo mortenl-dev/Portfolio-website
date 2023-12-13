@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Switcher</title>
+  <style>
+    .element-container {
+      display: flex;
+      overflow: hidden;
+      width: 500px; /* Set the total width of the container */
+    }
+
+    .element {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Give each element a unique background color */
+    #element1 { background-color: lightcoral; }
+    #element2 { background-color: lightgreen; }
+    #element3 { background-color: lightsalmon; }
+    #element4 { background-color: lightsteelblue; }
+    #element5 { background-color: lightgoldenrodyellow; }
+  </style>
+</head>
+<body>
+
+<div class="element-container">
+  <div id="element1" class="element">1</div>
+  <div id="element2" class="element">2</div>
+  <div id="element3" class="element">3</div>
+  <div id="element4" class="element">4</div>
+  <div id="element5" class="element">5</div>
+</div>
+
+<button onclick="switchElement(-1)">Left</button>
+<button onclick="switchElement(1)">Right</button>
+
+<script>
+  let currentIndex = 0;
+  const elements = document.querySelectorAll('.element');
+  const container = document.querySelector('.element-container');
+
+  function switchElement(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = elements.length - 1;
+    } else if (currentIndex >= elements.length) {
+      currentIndex = 0;
+    }
+
+    updateDisplay();
+  }
+
+  function updateDisplay() {
+    const transformValue = `translateX(${-currentIndex * 100}px)`;
+    container.style.transform = transformValue;
+  }
+
+  // Initial display
+  updateDisplay();
+</script>
+
+</body>
+</html>

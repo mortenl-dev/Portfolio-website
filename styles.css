@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'League Spartan', sans-serif;
-    
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     background-color: #312f38;
@@ -46,30 +46,52 @@ nav {
     max-width: 1280px;
     margin: 10px auto;
     padding: 0 20px;
+    
 }
 
 a {
-    color: #a8ffcc; /* Change this to your desired color (e.g., blue) */
+    color: #fff;
+     /* Change this to your desired color (e.g., blue) */
     text-decoration: none;
-    
+    position: relative;
+    color: #a8ffcc; /* Text color */
+    transition: color 0.3s, border-bottom 0.3s; /* Transition for color and border-bottom */
 }
 
 /* Add an underline on hover */
 a:hover {
-    text-decoration: underline;
+    color: #a8ffcc;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a8ffcc; /* Underline color */
+    transform: scaleX(0); /* Initially set to zero width */
+    transform-origin: left;
+    transition: transform 0.3s; /* Transition for the underline */
+}
+
+
+a:hover::before {
+    transform: scaleX(1); /* Expand to full width on hover */
 }
 .logo {
     font-size: 24px;
     color: #32ffdd;
+    z-index:2;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    z-index:2;
 }
-.nav-links li :hover {
-    text-decoration: underline;
-}
+
 .nav-links li {
     margin-right: 20px;
 }
@@ -80,7 +102,7 @@ a:hover {
 }
 .language-btn  {
     margin: -24px auto;
-    background-color: #312f38;
+    background-color: rgb(49, 47, 56);
             border: none;
             padding: 0;
             width: 32px; /* Set the button size as needed */
@@ -128,7 +150,6 @@ cursor:pointer;}
 /* Style sections and containers */
 /* Update the section background to a slightly lighter tone */
 .section {
-     /* Modern gray color for sections */
     padding: 0px 0;
     
 }
@@ -149,8 +170,69 @@ cursor:pointer;}
     background-color: #211f2b;
     margin: 40px 0;
     padding: 40px 0;
+    
+}
+#buttons {
+    position:relative;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    border-radius:25px ;
+    border: none;
+    position:absolute;
+    color: #fff;
+    height:100px;
+    width: 20%;
+    background-color: #211f2b;
+}
+button:hover {
+    
+    background-color: #2f2c3d;
+}
+#projects {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    transition:  0.5s ease-in-out;
 }
 
+.project {
+    border-radius:25px ;
+    background-color: #211f2b;
+    min-width:50%;
+    margin: 0 100%;
+    padding: 10px 20px;
+    line-height: 1.5;
+    color: #fff;
+    transition: transform .3s;
+}
+.project:hover {
+
+    transform: scale(1.1);
+}
+.fade-name {
+    animation: fadeInOut 2s ease forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+}
+@keyframes fadeInOut {
+    0% {
+      background-color: rgb(49, 47, 56); /* Middle point, fully visible */
+    }
+    50% {
+        background-color: rgb(49, 47, 56);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0); /* End with a transparent background */
+    }
+  }
 .about-image {
     flex: 1;
  /* Adjust text alignment for the image */
@@ -174,45 +256,87 @@ cursor:pointer;}
     line-height: 1.5;
     color: #fff;
 }
-.fade-underline {
-    text-decoration: none;
-    position: relative;
-    color: #a8ffcc; /* Text color */
-    transition: color 0.3s, border-bottom 0.3s; /* Transition for color and border-bottom */
-}
 
-.fade-underline::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #a8ffcc; /* Underline color */
-    transform: scaleX(0); /* Initially set to zero width */
-    transform-origin: left;
-    transition: transform 0.3s; /* Transition for the underline */
-}
 
-.fade-underline:hover {
-    color: #a8ffcc; /* Text color on hover */
-}
 
-.fade-underline:hover::before {
-    transform: scaleX(1); /* Expand to full width on hover */
-}
 /* Style portfolio items */
-.portfolio-item {
+.item {
     
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%; 
 }
+.counter {
+    font-size: 4em;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.5s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 10px;
 
+  }
+
+.counterDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
+.counterContainer {
+    display:flex;
+    flex-direction: row;
+    margin-left: 16px;
+    margin-top: -24px;
+}
+
+/*bg stuff*/
+
+.custom-shape-divider-top-1702079871 {
+    z-index:1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    line-height: 0;
+    animation: wave 32s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        width: 100%; /* Middle point, fully visible */
+    }
+    50% {
+        width: 150%;
+    }
+    100% {
+        width: 100%; /* End with a transparent background */
+    }
+  }
+
+.custom-shape-divider-top-1702079871 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 83px;
+}
+
+.custom-shape-divider-top-1702079871 .shape-fill {
+    fill: #4EADAB;
+}
+
+#contact {
+    background-color: #211f2b;
+    padding: 40px 0;
+    margin-top:40px;
+}
 /* Style the footer */
 footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: auto;
+    background-color: #211f2b;
 }
